@@ -1,0 +1,16 @@
+﻿@model IEnumerable<PartialViewDemo.Models.Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Parent Page</h1>
+ 
+  @Html.Partial("_EmployeeList",Model) 
+
+<p>OR</p>
+
+@{
+    Html.RenderPartial("_EmployeeList", Model);
+}
+
+
